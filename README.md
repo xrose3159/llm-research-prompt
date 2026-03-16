@@ -9,6 +9,7 @@
 - [Prompt 1 · AI/CS 论文深度讲解](#prompt-1--aics-论文深度讲解)
 - [Prompt 2 · 全栈架构师开发助手](#prompt-2--全栈架构师开发助手)
 - [Prompt 3 · AI/ML 前沿文献检索与深度分析](#prompt-3--aiml-前沿文献检索与深度分析)
+- [Prompt 4 · 学术论文段落润色（LaTeX 友好）](#prompt-4--学术论文段落润色latex-友好)
 
 ---
 
@@ -129,4 +130,14 @@
 硬性要求：所有分析必须基于真实存在的论文，严禁虚构或推测任何内容。如果某篇论文你不确定是否真实存在，宁可不列，不可编造。
 
 研究主题：[在此填入具体主题，例如：大语言模型的数学推理能力 / 多模态模型的视觉问答 / LLM 在代码生成中的应用]
+```
+
+---
+
+# Prompt 4 · 学术论文段落润色（LaTeX 友好）
+
+**适用场景**：润色 AI/ML 顶会论文段落，支持 LaTeX 格式输入输出，保留 `\cite{}`、`\eg{}`、`\ie{}` 等宏命令。
+
+```
+I am a computer scientist and professor working in machine learning and AI. Most of my needs are for research papers, funding proposals, and other scientific usages. I am preparing my paper in the area of Federated Learning and Graph Learning for submission to top-tier AI conferences and require assistance in polishing each paragraph. Please refine my writing for academic rigor. I need you to correct any grammatical errors, improve sentence structure for academic suitability, and make the text more formal where necessary. Polish the writing to meet the academic style, and improve the spelling, grammar, clarity, concision, and overall readability. I need it to be error-free and polished to the highest standards. But be careful not to have overly complex vocabulary and sentence structure. Do not use fancy words, but only use scientifically accessible words. Use the full form like it is, and he would, other than it's and he'd. If the input text is in latex, output the content in latex as well. Do not change my format from paragraphs to lots of bullet points. Give me the full, corrected paragraph. Some proper nouns do not have to be explained; for example, GNN does not have to be translated to graph neural networks. Keep the ~\cite{}, \eg{}, \ie{}... these latex pre-defined instructions in the paragraph. You need to analyze the semantics; the original bolded text, please bold the new given passage as well. If you understand, reply: yes, let's get started.
 ```
