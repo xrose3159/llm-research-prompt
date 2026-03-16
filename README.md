@@ -10,6 +10,7 @@
 - [Prompt 2 · 全栈架构师开发助手](#prompt-2--全栈架构师开发助手)
 - [Prompt 3 · AI/ML 前沿文献检索与深度分析](#prompt-3--aiml-前沿文献检索与深度分析)
 - [Prompt 4 · 学术论文段落润色（LaTeX 友好）](#prompt-4--学术论文段落润色latex-友好)
+- [Prompt 5 · 从方法名称字符串中提取有意义的缩写词](#prompt-5--从方法名称字符串中提取有意义的缩写词)
 
 ---
 
@@ -140,4 +141,28 @@
 
 ```
 I am a computer scientist and professor working in machine learning and AI. Most of my needs are for research papers, funding proposals, and other scientific usages. I am preparing my paper in the area of Federated Learning and Graph Learning for submission to top-tier AI conferences and require assistance in polishing each paragraph. Please refine my writing for academic rigor. I need you to correct any grammatical errors, improve sentence structure for academic suitability, and make the text more formal where necessary. Polish the writing to meet the academic style, and improve the spelling, grammar, clarity, concision, and overall readability. I need it to be error-free and polished to the highest standards. But be careful not to have overly complex vocabulary and sentence structure. Do not use fancy words, but only use scientifically accessible words. Use the full form like it is, and he would, other than it's and he'd. If the input text is in latex, output the content in latex as well. Do not change my format from paragraphs to lots of bullet points. Give me the full, corrected paragraph. Some proper nouns do not have to be explained; for example, GNN does not have to be translated to graph neural networks. Keep the ~\cite{}, \eg{}, \ie{}... these latex pre-defined instructions in the paragraph. You need to analyze the semantics; the original bolded text, please bold the new given passage as well. If you understand, reply: yes, let's get started.
+```
+
+---
+
+# Prompt 5 · 从方法名称字符串中提取有意义的缩写词
+
+**适用场景**：给定一个 AI/ML 方法的完整名称字符串，按字母顺序从中提取字符，组成一个真实存在、积极好听的英语单词作为方法缩写。
+
+```
+从字符串："[在此填入方法全称，例如：Modality-Specific Enhanced Dynamic Emotion Experts]" 按照字母顺序提取字符，这些字符可以从不同单词不同位置选取（但必须存在于所提供的字符串中），不一定要首字母，但需要严格按照字符串中字母出现的先后顺序排列，最终组成一个有意义、积极的英语单词（须真实存在于英语词典中），不需要首字母缩写，只需要保证提取顺序正确即可。这个单词将作为该方法的名字，最好响亮好听，不要太长。请告诉我每个字母是从哪个单词的哪个位置提取的。
+
+你的回答格式参考如下示例：
+
+示例 1：
+字符串："{G}raph {R}epresentation learning method with {E}dge h{E}terophily discrimina{T}ing"
+提取结果：GREET
+提取说明：G(Graph 首字母) → R(Representation 首字母) → E(Edge 首字母) → E(hEterophily 第2字母) → T(discriminaTing 第12字母)
+
+示例 2：
+字符串："{E}pidemiology-{A}ware Neu{R}al ODE with Continuous Disease {T}ransmission Grap{H}"
+提取结果：EARTH
+提取说明：E(Epidemiology 首字母) → A(Aware 首字母) → R(NeuRal 第4字母) → T(Transmission 首字母) → H(GrapH 末字母)
+
+Please think step by step.
 ```
